@@ -5,7 +5,7 @@ echo "ATUALIZANDO SISTEMA..."
 sudo apt update && sudo apt upgrade -y
 
 echo "INSTALANDO PROGRAMAS ESSENCIAIS"
-sudo apt install -y vlc libreoffice gdb gcc adb git vim openjdk-25-jdk
+sudo apt install -y vlc libreoffice gdb gcc adb git vim openjdk-25-jdk gparted
 
 
 #------------------------------------------
