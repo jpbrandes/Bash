@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo dpkg --add-architecture i386
+
 echo "ATUALIZANDO SISTEMA..."
 sudo apt update && sudo apt upgrade -y
 
