@@ -4,7 +4,7 @@
 # ============================================================
 #   CANIVETE SUÍÇO — DIAGNÓSTICO PC
 #   Para uso no Linux Mint Live Mode (pendrive)
-#   Execute como root: sudo ./Verificacao.sh
+#   Executar como root: sudo ./Verificacao.sh
 # ============================================================
 
 RED='\033[0;31m'
@@ -20,9 +20,9 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 echo -e "${YELLOW}Instalando ferramentas essenciais...${NC}"
-apt-get update -qq
+sudo apt update -y
 # FIX 3: adicionado lm-sensors para leitura real de temperatura
-apt-get install -y smartmontools ethtool ntfs-3g lm-sensors -qq
+sudo apt install -y smartmontools ethtool ntfs-3g lm-sensors -qq
 
 function pause() {
     read -p "Pressione [Enter] para continuar..."
