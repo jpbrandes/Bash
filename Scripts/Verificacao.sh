@@ -22,7 +22,7 @@ fi
 echo -e "${YELLOW}Instalando ferramentas essenciais...${NC}"
 sudo apt update -y
 # FIX 3: adicionado lm-sensors para leitura real de temperatura
-sudo apt install smartmontools ethtool ntfs-3g lm-sensors git -y # Esse bloco instala as ferramentas smartmontools, ethtool, ntfs-3g e lm-sensors
+sudo apt install smartmontools ethtool ntfs-3g lm-sensors git gh -y # Esse bloco instala as ferramentas smartmontools, ethtool, ntfs-3g e lm-sensors
 
 function pause() {
     read -p "Pressione [Enter] para continuar..."
