@@ -1,13 +1,36 @@
 #!/bin/bash
 
+echo "============================"
+echo "ATUALIZANDO O SISTEMA"
+echo "============================"
 
-#Atualizar o sistema
 sudo apt update && sudo apt upgrade -y
 
+echo "============================"
+echo "INSTALAÇÃO DE PROGRAMAS ESSENCIAIS"
+echo "============================"
 
-#Instalar essencial
 sudo apt install git gcc wget g++ vlc gimp openjdk-25-jdk libreoffice texlive-full texmaker -y 
 
+echo "============================"
+echo "INSTALAÇÃO VISUAL STUDIO CODE"
+echo "============================"
+
+wget https://vscode.download.prss.microsoft.com/dbazure/download/stable/7e7950df89d055b5a378379db9ee14290772148a/code_1.126.0-1782208079_amd64.deb
+
+sudo apt install ./code_1.126.0-1782208079_amd64.deb -y
+
+sudo rm code_1.126.0-1782208079_amd64.deb
+
+echo "============================"
+echo "INSTALAÇÃO GOOGLE CHROME"
+echo "============================"
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+sudo apt install ./google-chrome-stable_current_amd64.deb -y
+
+sudo rm google-chrome-stable_current_amd64.deb
 #----------------------------------------
 echo "============================"
 echo "CONFIGURAÇÃO GITHUB (PARA NÃO PEDIR SENHA)"
@@ -22,8 +45,5 @@ echo "============================"
 	&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
 	&& sudo apt update \
 	&& sudo apt install gh -y
-
-    sudo apt update
-    sudo apt install gh
 
 echo "============================"
