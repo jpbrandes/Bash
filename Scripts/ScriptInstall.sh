@@ -6,7 +6,7 @@ sudo apt update && sudo apt upgrade -y
 
 
 #Instalar essencial
-sudo apt install git gcc g++ vlc gimp openjdk-25-jdk libreoffice texlive-full texmaker -y 
+sudo apt install git gcc wget g++ vlc gimp openjdk-25-jdk libreoffice texlive-full texmaker -y 
 
 #----------------------------------------
 echo "============================"
