@@ -1,20 +1,20 @@
 #!/bin/bash
 
-echo "============================"
+echo "========================================================"
 echo "ATUALIZANDO O SISTEMA"
-echo "============================"
+echo "========================================================"
 
 sudo apt update && sudo apt upgrade -y
 
-echo "============================"
+echo "========================================================"
 echo "INSTALAÇÃO DE PROGRAMAS ESSENCIAIS"
-echo "============================"
+echo "========================================================"
 
 sudo apt install git gcc wget g++ vlc gimp openjdk-25-jdk libreoffice texlive-full texmaker -y 
 
-echo "============================"
+echo "========================================================"
 echo "INSTALAÇÃO VISUAL STUDIO CODE"
-echo "============================"
+echo "========================================================"
 
 wget https://vscode.download.prss.microsoft.com/dbazure/download/stable/7e7950df89d055b5a378379db9ee14290772148a/code_1.126.0-1782208079_amd64.deb
 
@@ -22,19 +22,19 @@ sudo apt install ./code_1.126.0-1782208079_amd64.deb -y
 
 sudo rm code_1.126.0-1782208079_amd64.deb
 
-echo "============================"
+echo "========================================================"
 echo "INSTALAÇÃO GOOGLE CHROME"
-echo "============================"
+echo "========================================================"
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 sudo apt install ./google-chrome-stable_current_amd64.deb -y
 
 sudo rm google-chrome-stable_current_amd64.deb
-#----------------------------------------
-echo "============================"
+
+echo "========================================================"
 echo "CONFIGURAÇÃO GITHUB (PARA NÃO PEDIR SENHA)"
-echo "============================"
+echo "========================================================"
 
 (type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) \
 	&& sudo mkdir -p -m 755 /etc/apt/keyrings \
@@ -46,4 +46,4 @@ echo "============================"
 	&& sudo apt update \
 	&& sudo apt install gh -y
 
-echo "============================"
+echo "========================================================"
